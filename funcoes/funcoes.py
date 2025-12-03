@@ -69,3 +69,5 @@ criar_etiqueta_produto("Carro", "Pneus", "motor", "bancos", "Alarme")
 
 
 
+
+
