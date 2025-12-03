@@ -1,0 +1,75 @@
+
+# ESTRUTURA DE REPETIÇÃO
+
+# 1 - Dada uma lista de valores inteiros criar um programa para somar
+# os valores pares e valores ímpares
+
+import random
+inteiros = []
+soma_par = 0
+soma_impar = 0
+for i in range(1, 11):
+    inteiros.append(random.randint(1, 10))
+for numero in inteiros:
+    if numero % 2 == 0:
+        soma_par += numero
+    else:
+        soma_impar += numero
+print(f"Valores : {inteiros}")
+print(f"A soma dos valores pares é..: {soma_par}")
+print(f"A soma dos valores impares é: {soma_impar}")
+
+# ------------------------------------------------------
+
+# 2- Dada uma palavra criar uma programa para retornar a
+# quantidade de vogais e quantidade de consoantes
+
+palavra = input("escreva uma palavra: ").upper()
+qtd_vogais = 0
+qtd_consoantes = 0
+for letra in palavra:
+    if (letra == "A" or letra == "E" or letra == "I" or letra == "O" or letra == "U" or letra == "Á" or
+    letra == "É" or letra == "Í" or letra == "Ó" or letra == "Ú" or letra == "Â" or letra == "Ê" or
+    letra == "Ô" or letra == "À"):
+        qtd_vogais += 1
+    else:
+        if letra != "-":
+            qtd_consoantes += 1
+print(f"Na palavra {palavra}, existem {qtd_vogais} vogais.")
+print(f"Na palavra {palavra}, existem {qtd_consoantes} consoantes.")
+
+# --------------------------------------------------------
+
+# 3- Criar um programa para adicionar funcionários. Os funcionários
+# devem ter nome, sexo e salário o programa deve retornar a
+# soma de salários dos homens e soma dos salários das mulheres
+
+soma_salario_homens = 0
+soma_salario_mulheres = 0
+print(f'{" CADASTRO DE FUNCIONÁRIOS ":=^50}')
+while True:
+    nome = input("Nome......: ")
+    sexo = " "
+    while sexo not in "MF":
+        sexo = input("Sexo [M/F]:").upper()
+        if sexo not in "MF":
+            print("Opção invalida! Informe o Sexo novamente.")
+    salario = float(input("Salário...: "))
+    if sexo == "M":
+        soma_salario_homens += salario
+    else:
+        soma_salario_mulheres += salario
+    opcao = " "
+    while opcao not in "SN":
+        opcao = input("Deseja cadastrar outro funcionário [S/N]?").upper()
+        if opcao not in "SN":
+            print("Opção invalida! Digite [S/N].")
+    print("-" * 50)
+    if opcao == "N":
+        break
+print(f"A somatória dos salários dos Homens é {soma_salario_homens:.2f}")
+print(f"A somatória dos salários das Mulheres é {soma_salario_mulheres:.2f}")
+
+
+
+
