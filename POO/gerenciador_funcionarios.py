@@ -11,7 +11,7 @@ class Funcionario:
         self.cargo = cargo
         # Atributo da instancia: exclusiva deste objeto
         # converte o valor de texto (inout) para numero inteiro
-        self.salario = int(salario)
+        self.salario = salario
 
     def calcular_bonus(self):
         #Logica de Metodo
@@ -24,12 +24,12 @@ print("-"*40)
 
 nome_a = input("Nome do Funcionario A:")
 cargo_a = input("Cargo do Funcionario A:")
-salario_a = input("Salario (Apenas números inteiros) do Funcionario A:")
+salario_a = float(input("Salario (Apenas números inteiros) do Funcionario A:"))
 
 func_a = Funcionario(nome_a, cargo_a, salario_a)
 
 print("-"*40)
-print("Cadastro de Funcioario (2/2")
+print("Cadastro de Funcionario (2/2")
 print("-"*40)
 
 nome_b = input("Nome do Funcionario B:")
