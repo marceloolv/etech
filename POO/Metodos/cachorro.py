@@ -6,7 +6,7 @@ class Cachorro:
 
     # Metodo: Comportamento/ação
     def latir(self):
-        print(f"{self.nome} o cachorro esta latindo 'au au'")
+        return f"{self.nome} o cachorro esta latindo 'au au'"
 
     # Método: Comportamento que modifica o estado do objeto
 
