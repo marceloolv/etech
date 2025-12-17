@@ -47,6 +47,7 @@ for i in range(quantidade):
     if tipo == 1:
         salario = float(input("Digite o salario Fixo: "))
         funcionario = FuncionarioCLT(nome, salario)
+        funcionario.
 
     elif tipo == 2:
         horas = float(input("Digite as horas trabalhadas: "))
